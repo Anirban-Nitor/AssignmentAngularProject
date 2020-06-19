@@ -1,0 +1,17 @@
+<form [formGroup]="editUser" (ngSubmit)="onUpdateUser()">
+  
+    <div class="container">
+      <label for="userName"><b>Project Name</b></label>
+      <input formControlName="userName" type="text" placeholder="Enter User Name" name="userName" required>
+    </div>
+
+    <div class="container">
+      <label for="Email"><b>Project Type</b></label>
+      <input formControlName="Email" type="text" placeholder="Enter Email Type" name="Email" required>
+    </div>
+    
+    <div class="container">
+        <button type="submit">Update User</button>
+    </div>
+  
+</form>

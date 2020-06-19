@@ -1,0 +1,37 @@
+<div class="jumbotron text-center">
+    <h1>Project List</h1>
+</div>
+<div>
+    <button class="btn btn-primary" routerLink="/addproject">Add Project</button>
+    <p></p>
+    <button class="btn btn-primary" (click)="getProjectList()">Project List</button>
+</div>
+
+<p></p>
+
+<!-- <input type="search" placeholder="search item" [(ngModel)]="search"> -->
+
+<div class="container" style="margin-top: 10px;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Project Name</th>
+                <th scope="col">Project Type</th>
+                <th scope="col">Project Technology</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+    
+        <!-- <tbody *ngFor="let item of productList | filter: search"> -->
+        <tbody *ngFor="let item of projectList">    
+            <tr>
+                <td>{{item.projectName}}</td>
+                <td>{{item.projectType}}</td>
+                <td>{{item.projectTechnology}}</td>
+                <i class="fa fa-trash" aria-hidden="false" (click)="editProject(item)"></i>
+                <button class="btn btn-primary" (click)="editProject(item)" style="color: black; border: none;" width="60" height="100">Edit</button>
+                <button class="btn btn-primary" (click)="deleteProject(item)" style="color: red; border: none;">Delete</button>
+            </tr>
+        </tbody>
+    </table>
+</div>

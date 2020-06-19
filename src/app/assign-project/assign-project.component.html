@@ -1,0 +1,22 @@
+
+<form [formGroup]="assignProject" (ngSubmit)="onAddProject()">
+  
+    <div class="container">
+      <label for="Email"><b>Email</b></label>
+      <input formControlName="Email" type="text" placeholder="Enter Email" name="Email" required disabled>
+    </div>
+
+    <div class="container">
+      <label for="projectType"><b>Assign Project</b></label>
+      <select formControlName="ProjectName">
+        <option *ngFor="let project of projectList" [value]="project.projectName">
+          {{project.projectName}}
+        </option>
+      </select>
+    </div>
+    
+    <div class="container">
+        <button type="submit">Add Project</button>
+    </div>
+  
+</form>

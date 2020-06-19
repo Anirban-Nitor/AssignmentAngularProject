@@ -1,0 +1,32 @@
+<form [formGroup]="editLogFormData" (ngSubmit)="onUpdateLog()">
+  
+    <div class="container">
+      <label for="projectName"><b>Log Date</b></label>
+      <input formControlName="projectName" type="text" placeholder="Edit Date" name="projectName" required disabled>
+    </div>
+
+    <div class="container">
+      <label for="date"><b>Log Date</b></label>
+      <input formControlName="date" type="date" placeholder="Edit Date" name="date" required>
+    </div>
+
+    <div class="container">
+      <label for="time"><b>Time spend</b></label>
+      <input formControlName="time" type="text" placeholder="Edit Duration" name="time" required>
+    </div>
+    
+    <div class="container">
+        <label for="comment"><b>Comment</b></label>
+        <input formControlName="comment" type="text" placeholder="Edit Comment" name="comment" required>
+    </div>
+
+    <div class="container">
+      <label for="email"><b>Log Date</b></label>
+      <input formControlName="email" type="text" placeholder="Email" name="email" required disabled>
+    </div>
+
+    <div class="container">
+        <button type="submit">Update Log</button>
+    </div>
+  
+</form>
