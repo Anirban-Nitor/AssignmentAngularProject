@@ -1,0 +1,27 @@
+<form [formGroup]="addUser" (ngSubmit)="onAddUser()">
+  
+    <div class="container">
+      <label for="userName"><b>User Name</b></label>
+      <input formControlName="userName" type="text" placeholder="Enter User Name" name="userName" required>
+    </div>
+
+    <div class="container">
+      <label for="Email"><b>Email</b></label>
+      <input formControlName="Email" type="text" placeholder="Enter Email" name="Email" required>
+    </div>
+    
+    <div class="container">
+        <label for="Password"><b>Password</b></label>
+        <input formControlName="Password" type="password" placeholder="Enter password" name="Password" required>
+    </div>
+
+    <div class="container">
+      <label for="confirmPassword"><b>Password</b></label>
+      <input formControlName="confirmPassword" type="password" placeholder="Enter password" name="confirmPassword" required>
+  </div>
+
+    <div class="container">
+        <button type="submit">Register</button>
+    </div>
+  
+</form>

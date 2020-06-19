@@ -1,0 +1,44 @@
+<app-logout></app-logout>
+<div class="jumbotron text-center">
+    <h1>User List</h1>
+</div>
+<div>
+    <!-- <button class="btn btn-primary" routerLink="/addproject">Add Project</button> -->
+    <p></p>
+    <button class="btn btn-primary" (click)="getAllUserList()">User List</button>
+</div>
+
+<p></p>
+
+<!-- <input type="search" placeholder="search item" [(ngModel)]="search"> -->
+
+<div class="container" style="margin-top: 10px;">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Email Type</th>
+                <th scope="col">Project</th>
+                <th scope="col">Action</th>
+                <th scope="col">Assign project</th>
+            </tr>
+        </thead>
+    
+        <!-- <tbody *ngFor="let item of productList | filter: search"> -->
+        <tbody *ngFor="let item of userList">    
+            <tr>
+                <td>{{item.userName}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.projectId}}</td>
+                <button class="btn btn-primary" (click)="editProject(item)" style="color: black; border: none;" width="60" height="100">Edit</button>
+                <button class="btn btn-primary" (click)="deleteProject(item)" style="color: red; border: none;">Delete</button>
+                <!-- <script lang="javascript">
+                    if (item.projectId) {
+                        document.getElementById("assignment").style.visibility="hidden";
+                    }
+                </script> -->
+                <td><button id="assignment" class="btn btn-primary" (click)="assignProject(item)" style="color: red; border: none;">Assign</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

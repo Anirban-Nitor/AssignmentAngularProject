@@ -1,0 +1,40 @@
+<app-logout></app-logout>
+<div class="text-center">
+    <h1>Time Log</h1>
+</div>
+<form [formGroup]="addTimeLog" (ngSubmit)="AddTimeLog()">
+  
+    <div class="container">
+      <label for="ProjectName"><b>Project Name: </b></label>
+      <input formControlName="ProjectName" type="text" placeholder="" name="ProjectName" required disabled>
+    </div>
+
+    <div class="container">
+      <label for="Date"><b>Date: </b></label>
+      <br>
+      <input formControlName="Date" type="date" placeholder="Enter Project Type" name="Date" required>
+    </div>
+    
+    <div class="container">
+        <label for="Time"><b>Time: </b></label>
+        <br>
+        <input formControlName="Time" type="text" placeholder="Enter Hours" name="Time" required>
+    </div>
+
+    <div class="container">
+        <label for="Comment"><b>Comment </b></label>
+        <br>
+        <input formControlName="Comment" type="text" placeholder="Enter Comment" name="Comment">
+    </div>
+
+    <div class="container">
+        <label for="Email"><b>Email: </b></label>
+        <br>
+        <input formControlName="Email" type="UserId" placeholder="Email" name="Email" required disabled>
+    </div>
+
+    <div class="container">
+        <button type="submit">Add Log</button>
+    </div>
+  
+</form>

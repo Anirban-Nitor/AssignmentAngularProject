@@ -1,0 +1,28 @@
+<app-logout></app-logout>
+<form [formGroup]="editProject" (ngSubmit)="onUpdateProject()">
+  
+    <div class="container">
+      <label for="projectName"><b>Project Name</b></label>
+      <input formControlName="projectName" type="text" placeholder="Enter Project Name" name="projectName" required>
+    </div>
+
+    <div class="container">
+      <label for="projectType"><b>Project Type</b></label>
+      <input formControlName="projectType" type="text" placeholder="Enter Project Type" name="projectType" required>
+    </div>
+    
+    <div class="container">
+        <label for="projectTechnology"><b>Technology</b></label>
+        <input formControlName="projectTechnology" type="text" placeholder="Enter Technology" name="projectTechnology" required>
+    </div>
+
+    <div class="container">
+        <label for="projectDetails"><b>Details</b></label>
+        <input formControlName="projectDetails" type="text" placeholder="Enter Details" name="projectDetails">
+    </div>
+
+    <div class="container">
+        <button type="submit">Update Project</button>
+    </div>
+  
+</form>
