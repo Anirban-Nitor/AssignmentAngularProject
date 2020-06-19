@@ -23,7 +23,10 @@ import { UserService } from './user.service';
 import { AssignProjectComponent } from './assign-project/assign-project.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
 import { EditTimeLogComponent } from './time-logs/edit-time-log/edit-time-log.component';
+<<<<<<< HEAD
 import { LogoutComponent } from './logout/logout.component';
+=======
+>>>>>>> d390d0db1729cc03a26064d944ecfab2bc54e828
 
 @NgModule({
   declarations: [
@@ -40,8 +43,12 @@ import { LogoutComponent } from './logout/logout.component';
     UserComponent,
     AssignProjectComponent,
     EditUserComponent,
+<<<<<<< HEAD
     EditTimeLogComponent,
     LogoutComponent
+=======
+    EditTimeLogComponent
+>>>>>>> d390d0db1729cc03a26064d944ecfab2bc54e828
   ],
   imports: [
     BrowserModule,
